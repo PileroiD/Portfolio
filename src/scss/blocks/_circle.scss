@@ -1,0 +1,6 @@
+.circle {
+    position: relative;
+    padding-left: 10px;
+    z-index: 2;
+    @include before_circle;
+}

@@ -1,11 +1,17 @@
 @import 'libs/font';
 @import 'libs/bootstrap-reboot.min';
-@import 'libs/icon-fonts';
 
 @import 'base/variables';
+@import 'base/mixins';
 
 * {
-    font-family: "Poppins", sans-serif;
+    font-family: "Gotham Pro", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    a {
+        text-decoration: none;
+    }
 }
 .container {
     max-width: 1140px;
@@ -15,3 +21,6 @@
 @import 'blocks/promo';
 @import 'blocks/title';
 @import 'blocks/buttons';
+@import 'blocks/circle';
+@import 'blocks/sidepanel';
+@import 'blocks/menu';
