@@ -18,6 +18,9 @@
     }
     &__descr {
         padding-top: 6px;
+        .divider {
+            margin: 0;
+        }
     }
     &__text {
         font-weight: 500;

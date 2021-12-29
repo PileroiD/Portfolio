@@ -12,4 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
     closeBtn.addEventListener('click', (e) => {
         menu.classList.remove('active');
     });
+
+
+    // skills
+
+    const counters = document.querySelectorAll('.tools__percents-amount');
+    const lines = document.querySelectorAll('.tools__percents-child');
+
+    counters.forEach((item, i) => {
+        lines[i].style.width = item.innerHTML;
+    });
+
 });
