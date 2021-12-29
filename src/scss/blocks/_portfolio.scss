@@ -1,0 +1,31 @@
+.portfolio {
+    padding-top: 120px;
+    &__wrapper {
+        padding-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(4, 280px);
+        grid-template-rows: repeat(2, 280px);
+        grid-auto-rows: 280px;
+        grid-gap: 5px;
+        .vertical {
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 4;
+        }
+        .horizontal {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+        }
+    }
+    &__item {
+        transition: all 0.6s;
+        &:hover {
+            transform: scale(1.03);
+            filter: grayscale(100%);
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
