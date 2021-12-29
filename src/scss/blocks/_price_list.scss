@@ -1,0 +1,36 @@
+.price_list {
+    padding-top: 60px;
+    &__wrapper {
+        margin-top: 60px;
+        padding: 0 60px;
+        display: grid;
+        grid-template: repeat(3, minmax(45px, auto)) / repeat(2, 365px);
+        grid-auto-rows: minmax(45px, auto);
+        row-gap: 15px;
+        justify-content: space-between;
+    }
+    &-item {
+        &__head {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            justify-content: space-between;
+        }
+        &__name {
+            justify-self: start;
+            position: relative;
+            @include before_circle;
+            &:before {
+                width: 15px;
+                height: 15px;
+                top: 3px;
+                left: -25px;
+            }
+        }
+        &__price {
+            justify-self: end;
+        }
+        &__text {
+            margin-top: 5px;
+        }
+    }
+}
