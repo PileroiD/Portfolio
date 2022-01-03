@@ -414,13 +414,13 @@
                     <div class="title title_fz14 contacts__text">Или оставьте ваши данные и я сам вам напишу:</div>
 
                     <div class="msg" onclick="gsapMsg.reverse()">Сообщение</div>
-                    <form class="contacts__form" enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
+                    <form class="contacts__form" enctype="multipart/form-data" method="post" id="form">
                         <div class="contacts__input">
-                            <input required name="name" id="name" type="text" class="form__input">
+                            <input required name="name" id="name" type="text" class="form__input" autocomplete="off">
                             <label for="name">Ваше имя*</label>
                         </div>
                         <div class="contacts__input">
-                            <input required name="email" id="email" type="email" class="form__input">
+                            <input required name="email" id="email" type="email" class="form__input" autocomplete="off">
                             <label for="email">Ваша почта*</label>
                         </div>
                         <div class="contacts__textarea">
@@ -428,7 +428,7 @@
                             <label for="text">Ваше сообщение</label>
                         </div>
                         <div class="contacts__triggers">
-                            <button class="contacts__btn btn">Отправить сообщение</button>
+                            <button type="submit" class="contacts__btn btn">Отправить сообщение</button>
                             <div class="contacts__policy checkbox">
                                 <input required type="checkbox" name="policy">
                                 <span class="checkbox__label">Я согласен(а) с <a href="/policy.html">политикой конфиденциальности</a></span>

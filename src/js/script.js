@@ -41,9 +41,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let arrInput = document.querySelectorAll('.form__input');
     let msg = document.querySelector('.msg');
-    var gsapMsg = gsap.to(".msg", 0.25, { autoAlpha: 1, y: -40, ease: Expo.inOut, paused: true });
+    let gsapMsg = gsap.to(".msg", 0.25, { autoAlpha: 1, y: -40, ease: Expo.inOut, paused: true });
+    const form = document.querySelector('#form');
 
-    function send(event, php) {
+    form.addEventListener('submit', send);
+
+    function send(event) {
         event.preventDefault ? event.preventDefault() : event.returnValue = false;
 
         for (let i = 0, count = arrInput.length; i < count; i++) {
@@ -55,15 +58,15 @@ document.addEventListener("DOMContentLoaded", () => {
         showMsg("Подождите. Идёт отправка сообщения", "#b1b1b1");
 
         let req = new XMLHttpRequest();
-        req.open('POST', php, true);
+        req.open('POST', 'send.php', true);
 
         req.onload = function () {
             event.target.querySelector("button").disabled = false;  // Обратное включение кнопки для отправки
-            console.log(req.status);
+            // console.log(req.status);
 
             if (req.status >= 200 && req.status < 400) {
-                json = JSON.parse(this.response); // Переводим ответ в json и выводим в консоль
-                console.log(json);
+                const json = JSON.parse(this.response); // Переводим ответ в json и выводим в консоль
+                // console.log(json);
 
                 // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
                 if (json.result == "success") {
@@ -100,6 +103,9 @@ document.addEventListener("DOMContentLoaded", () => {
         msg.innerText = message;
         msg.style.background = color;
         gsapMsg.restart();
+        setTimeout(() => {
+            msg.style.display = "none";
+        }, 3000);
     }
 
 });
