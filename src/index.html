@@ -23,6 +23,7 @@
     <meta name="msapplication-TileImage" content="icons/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <script src="js/gsap.min.js"></script>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -70,8 +71,8 @@
             <div class="title title_fz16 circle">Меня зовут Александр Лозинский</div>
             <h1 class="title title_fz48 promo__title">Я web-разработчик из города Киев</h1>
             <div class="promo__btns">
-                <a href="#" class="promo__link btn title_fz14">Портфолио</a>
-                <a href="#" class="promo__link btn_hidden title_fz14">Про меня</a>
+                <a href="#experience" class="promo__link btn title_fz14">Портфолио</a>
+                <a href="#aboutme" class="promo__link btn_hidden title_fz14">Про меня</a>
             </div>
         </div>
     </section>
@@ -83,7 +84,7 @@
                     <img src="img/main__photo.jpg" alt="photo">
                 </div>
                 <div class="about__descr">
-                    <h2 class="title title_fz16 circle about__title">Про меня</h2>
+                    <h2 id="aboutme" class="title title_fz16 circle about__title">Про меня</h2>
                     <div class="title title_fz36 about__subtitle">Меня зовут Александр</div>
                     <div class="divider divider_nomargin"></div>
                     <p class="about__text title title_fz14">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -123,7 +124,7 @@
 
     <section class="resume">
         <div class="container">
-            <h2 class="title title_fz16 title__section-title">Опыт</h2>
+            <h2 id="experience" class="title title_fz16 title__section-title">Опыт</h2>
             <div class="title title_fz36 title__section-subtitle">Чем я буду полезен</div>
             <div class="divider"></div>
 
@@ -314,17 +315,17 @@
             <div class="divider"></div>
 
             <div class="portfolio__wrapper">
-                <a href="#" class="portfolio__item">
+                <a href="/uber" class="portfolio__item">
                     <img src="img/works/uber.jpg" alt="uber">
                 </a>
-                <a href="#" class="portfolio__item">
+                <a href="/pulse" class="portfolio__item">
                     <img src="img/works/pulse.jpg" alt="pulse">
                 </a>
-                <a href="#" class="portfolio__item">
-                    <img src="img/works/bread.jpg" alt="bread">
+                <a href="/wordpress" class="portfolio__item">
+                    <img src="img/works/wordpress.jpg" alt="bread">
                 </a>
-                <a href="#" class="portfolio__item vertical">
-                    <img src="img/works/plans.jpg" alt="plans">
+                <a href="/food" class="portfolio__item vertical">
+                    <img src="img/works/food.jpg" alt="plans">
                 </a>
                 <a href="#" class="portfolio__item">
                     <img src="img/works/ipad.jpg" alt="ipad">
@@ -411,24 +412,26 @@
                         </a>
                     </div>
                     <div class="title title_fz14 contacts__text">Или оставьте ваши данные и я сам вам напишу:</div>
-                    <form action="#" class="contacts__form">
+
+                    <div class="msg" onclick="gsapMsg.reverse()">Сообщение</div>
+                    <form enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
                         <div class="contacts__input">
-                            <input required name="name" id="name" type="text" >
+                            <input required name="name" id="name" type="text" class="form__input">
                             <label for="name">Ваше имя*</label>
                         </div>
                         <div class="contacts__input">
-                            <input required name="email" id="email" type="email">
+                            <input required name="email" id="email" type="email" class="form__input">
                             <label for="email">Ваша почта*</label>
                         </div>
                         <div class="contacts__textarea">
-                            <textarea name="text" id="text"></textarea>
+                            <textarea name="text" id="text" class="form__input"></textarea>
                             <label for="text">Ваше сообщение</label>
                         </div>
                         <div class="contacts__triggers">
                             <button class="contacts__btn btn">Отправить сообщение</button>
-                            <div class="contacts__policy">
+                            <div class="contacts__policy checkbox">
                                 <input required type="checkbox" name="policy">
-                                <span>Я согласен(а) с <a href="/policy.html">политикой конфиденциальности</a></span>
+                                <span class="checkbox__label">Я согласен(а) с <a href="/policy.html">политикой конфиденциальности</a></span>
                             </div>
                         </div>
                     </form>
