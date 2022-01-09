@@ -24,13 +24,14 @@
     <meta name="theme-color" content="#ffffff">
 
     <script src="js/gsap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <aside class="sidepanel">
-        <a href="#" class="sidepanel__link"><img src="icons/social/facebook.svg" alt="facebook"></a>
-        <a href="#" class="sidepanel__link"><img src="icons/social/Instagram.svg" alt="facebook"></a>
-        <a href="#" class="sidepanel__link"><img src="icons/social/Github.svg" alt="facebook"></a>
+        <a href="https://www.facebook.com/profile.php?id=100025831861551" class="sidepanel__link"><img src="icons/social/facebookwhite.svg" alt="facebook"></a>
+        <a href="https://t.me/oleksandrlozynskiy" class="sidepanel__link"><img style="width: 23px" src="icons/social/telegramwhite.png" alt="telegram"></a>
+        <a href="https://github.com/PileroiD" class="sidepanel__link"><img src="icons/social/githubwhite.svg" alt="github"></a>
         <div class="sidepanel__divider"></div>
         <div class="sidepanel__text title_fz16"><span>Социальные сети</span></div>
     </aside>
@@ -44,24 +45,24 @@
             </div>
             <nav>
                 <ul class="menu__list">
-                    <li class="menu__link"><a href="#">ПРО МЕНЯ</a></li>
-                    <li class="menu__link"><a href="#">МОЙ ОПЫТ</a></li>
-                    <li class="menu__link"><a href="#">МОИ НАВЫКИ</a></li>
-                    <li class="menu__link"><a href="#">МОИ РАБОТЫ</a></li>
-                    <li class="menu__link"><a href="#">ПРАЙС-ЛИСТ</a></li>
-                    <li class="menu__link"><a href="#">КОНТАКТЫ</a></li>
+                    <li class="menu__link"><a href="#aboutme">ПРО МЕНЯ</a></li>
+                    <li class="menu__link"><a href="#experience">МОЙ ОПЫТ</a></li>
+                    <li class="menu__link"><a href="#tools">МОИ НАВЫКИ</a></li>
+                    <li class="menu__link"><a href="#portfolio">МОИ РАБОТЫ</a></li>
+                    <li class="menu__link"><a href="#price_list">ПРАЙС-ЛИСТ</a></li>
+                    <li class="menu__link"><a href="#contacts">КОНТАКТЫ</a></li>
                 </ul>
             </nav>
             <div class="menu__social">
-                <a class="menu__icon" href="#"><img src="icons/social/menu/Github.svg" alt="Github"></a>
-                <a class="menu__icon" href="#"><img src="icons/social/menu/Instagram.svg" alt="Instagram"></a>
-                <a class="menu__icon" href="#"><img src="icons/social/menu/Facebook.svg" alt="facebook"></a>
+                <a class="menu__icon" href="https://github.com/PileroiD"><img src="icons/social/menu/Github.svg" alt="Github"></a>
+                <a class="menu__icon" href="https://t.me/oleksandrlozynskiy"><img style="width: 23px" src="icons/social/telegram.svg" alt="telegram"></a>
+                <a class="menu__icon" href="https://www.facebook.com/profile.php?id=100025831861551"><img src="icons/social/menu/Facebook.svg" alt="facebook"></a>
             </div>
         </div>
         <div class="menu__overlay"></div>
     </div>
 
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="hamburger">
             <span></span>
             <span class="long"></span>
@@ -87,7 +88,7 @@
                     <h2 id="aboutme" class="title title_fz16 circle about__title">Про меня</h2>
                     <div class="title title_fz36 about__subtitle">Меня зовут Александр</div>
                     <div class="divider divider_nomargin"></div>
-                    <p class="about__text title title_fz14">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="about__text title title_fz14">Всем привет! Меня зовут Александр, я из Киева. Имею достаточный опыт в программировании и создании веб-сайтов и веб-приложений. Начал заниматься всем этим с 13 лет, когда насобирал деньги на свой первый компьютер. Первым языком был Python, выбрал его из-за относительной простоты в изучении. После изучения первого языка, начал пробовать самый популярный для него фреймворк, а именно - Django. Так как для разработки на Django надо знать Web, я начал изучать новые веб-технологии и языки. Паралельно в колледже учу С++</p>
                 </div>
                 <div class="about__skills">
                     <div class="about__skills-item">
@@ -96,10 +97,10 @@
                         </div>
                         <div>
                             <div class="title title_fz14">Web-разработка</div>
-                            <div class="about__skills-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                            <div class="about__skills-text">Создание веб-сайтов и веб-приложений</div>
                         </div>
                     </div>
-                    <div class="about__skills-item">
+                    <!-- <div class="about__skills-item">
                         <div class="about__skills-circle">
                             <img src="icons/about_me/mobile_dev.svg" alt="mobile_dev">
                         </div>
@@ -116,7 +117,7 @@
                             <div class="title title_fz14">UI/UX Design</div>
                             <div class="about__skills-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -139,10 +140,10 @@
                                     <div class="resume__item-icon">
                                         <img src="icons/experience/university.svg" alt="university">
                                     </div>
-                                    <h4 class="title title_fz14 resume__item-title">МГТУ им. Н. Э. Баумана</h4>
-                                    <div class="title title_fz12 resume__item-subtitle">Диплом магистра | Москва (2014-2020)</div>
+                                    <h4 class="title title_fz14 resume__item-title">КФКТЕ НАУ</h4>
+                                    <div class="title title_fz12 resume__item-subtitle">(еще учусь...)</div>
                                 </div>
-                                <div class="title title_fz12 resume__item-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
+                                <div class="title title_fz12 resume__item-body">Киевский Колледж компьютерных технологий и экономики. Поступил в 2020 году на специальность "Инженерия программного обеспечения", сейчас на 2 курсе. Здесь мы изучаем такие языки программирования как: C++, C, C# и Java. Работаем с базами данных</div>
                             </div>
                         </li>
                         <li>
@@ -154,7 +155,7 @@
                                     <h4 class="title title_fz14 resume__item-title">Udemy</h4>
                                     <div class="title title_fz12 resume__item-subtitle">Курсы по Web-разработке</div>
                                 </div>
-                                <div class="title title_fz12 resume__item-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
+                                <div class="title title_fz12 resume__item-body">Прошел 4 курса по веб-разработке на платформе Udemy. "Полное руководство по Python", "WEB-разработчик 2019", "Полное руководство по JavaScript", "React"</div>
                             </div>
                         </li>
                     </ul>
@@ -170,12 +171,12 @@
                                         <img src="icons/experience/developer.svg" alt="university">
                                     </div>
                                     <h4 class="title title_fz14 resume__item-title">Front-End Developer</h4>
-                                    <div class="title title_fz12 resume__item-subtitle">EPAM | Москва (2018-2019)</div>
+                                    <div class="title title_fz12 resume__item-subtitle">Фриланс</div>
                                 </div>
-                                <div class="title title_fz12 resume__item-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
+                                <div class="title title_fz12 resume__item-body">Выполнил несколько заказов на фрилансе по разработке веб-сайтов</div>
                             </div>
                         </li>
-                        <li>
+                        <!-- <li>
                             <div class="resume__item">
                                 <div class="resume__item-head">
                                     <div class="resume__item-icon">
@@ -186,14 +187,14 @@
                                 </div>
                                 <div class="title title_fz12 resume__item-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="tools">
+    <section id="tools" class="tools">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">Навыки</h2>
             <div class="title title_fz36 title__section-subtitle">Что я использую в работе</div>
@@ -236,17 +237,24 @@
                 </div>
                 <div class="tools__item">
                     <div class="tools__item-image">
-                        <img src="icons/skills/node.js.svg" alt="node.js"></img>
+                        <img src="icons/skills/Python.png" alt="python"></img>
                     </div>
-                    <div class="tools__item-head_title">Node.js</div>
-                    <div class="tools__item-text">Эта платформа позволяет создавать бэкенд для вашего продукта - “мозги”, которые будут выполнять действия, которые пользователь не видит</div>
+                    <div class="tools__item-head_title">Python</div>
+                    <div class="tools__item-text">Этот язык позволяет создавать бэкенд для вашего продукта - “мозги”, которые будут выполнять действия, которые пользователь не видит</div>
                 </div>
                 <div class="tools__item">
                     <div class="tools__item-image">
-                        <img src="icons/skills/mongo.db.svg" alt="mongo.db"></img>
+                        <img src="icons/skills/postgresql.png" alt="postgresql"></img>
                     </div>
-                    <div class="tools__item-head_title">Mongo.db</div>
-                    <div class="tools__item-text">Это нереляционная база данных, которая будет хранить данные вашего сайта или приложения</div>
+                    <div class="tools__item-head_title">PostgreSQL</div>
+                    <div class="tools__item-text">Это реляционная база данных, которая будет хранить данные вашего сайта или приложения</div>
+                </div>
+                <div class="tools__item">
+                    <div class="tools__item-image">
+                        <img src="icons/skills/django.png" alt="django"></img>
+                    </div>
+                    <div class="tools__item-head_title">Django</div>
+                    <div class="tools__item-text">Фреймворк базирущийся на языке Python. При его помощи можно создавать мощные веб-приложения и сайты, он позволяем объединять всё вместе: HTML&CSS + JavaScript + База данных, - и в итоге получается конфетка &#128076;</div>
                 </div>
             </div>
             <div class="tools__percents">
@@ -288,7 +296,7 @@
                 </div>
                 <div class="tools__percents-item">
                     <div class="tools__percents-head">
-                        <div class="tools__percents-title">Создание дизайна</div>
+                        <div class="tools__percents-title">Работа с дизайном</div>
                         <div class="tools__percents-amount">90%</div>
                     </div>
                     <div class="tools__percents-parent">
@@ -308,7 +316,7 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">Портфолио</h2>
             <div class="title title_fz36 title__section-subtitle">Мои работы</div>
@@ -337,7 +345,7 @@
         </div>
     </section>
 
-    <section class="price_list">
+    <section id="price_list" class="price_list">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">Прайс-лист</h2>
             <div class="divider"></div>
@@ -363,13 +371,13 @@
                     </div>
                     <div class="title title_fz12 price_list-item__text">Сайт для вашего бизнеса или компании</div>
                 </div>
-                <div class="price_list-item">
+                <!-- <div class="price_list-item">
                     <div class="price_list-item__head">
                         <div class="title title_fz14 price_list-item__name">Android/IOS Приложение</div>
                         <div class="title title_fz14 price_list-item__price">от 25000 руб.</div>
                     </div>
                     <div class="title title_fz12 price_list-item__text">Приложение для смартфона любой ОС</div>
-                </div>
+                </div> -->
                 <div class="price_list-item">
                     <div class="price_list-item__head">
                         <div class="title title_fz14 price_list-item__name">Интернет-магазин</div>
@@ -377,18 +385,18 @@
                     </div>
                     <div class="title title_fz12 price_list-item__text">Инструмент для ваших продаж в сети</div>
                 </div>
-                <div class="price_list-item">
+                <!-- <div class="price_list-item">
                     <div class="price_list-item__head">
                         <div class="title title_fz14 price_list-item__name">Дизайн</div>
                         <div class="title title_fz14 price_list-item__price">Индивидуально</div>
                     </div>
                     <div class="title title_fz12 price_list-item__text">Создам дизайн для вашего сайта/приложения...</div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
 
-    <section class="contacts">
+    <section id="contacts" class="contacts">
         <div class="container">
             <div class="contacts__wrapper">
                 <div class="contacts__photo">
@@ -401,7 +409,7 @@
 
                     <div class="title title_fz14 contacts__text">Любым удобным для вас способом:</div>
                     <div class="contacts__social">
-                        <a href="#" class="contacts__link">
+                        <a href="https://www.facebook.com/profile.php?id=100025831861551" class="contacts__link">
                             <img src="icons/social/menu/Facebook.svg" alt="facebook">
                         </a>
                         <a href="https://t.me/oleksandrlozynskiy" class="contacts__link">
@@ -439,6 +447,10 @@
             </div>
         </div>
     </section>
+
+    <a href="#up" class="pageup">
+        <img src="icons/up-arrow.svg" alt="up-arrow">
+    </a>
 
     <script src="js/script.js"></script>
 </body>

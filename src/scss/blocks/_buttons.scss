@@ -9,3 +9,16 @@
         padding: 12px 25px;
     }
 }
+
+.pageup {
+    position: fixed;
+    display: none;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    scroll-behavior: smooth;
+    img {
+        width: 100%;
+    }
+}

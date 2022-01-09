@@ -26,6 +26,33 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+    // sidepanel
+
+    const sidepanel = document.querySelector('.sidepanel');
+    const sidepanel_icons = sidepanel.querySelectorAll('a img');
+    const sidepanel_text = sidepanel.querySelector('.sidepanel__text');
+    const divider = sidepanel.querySelector('.sidepanel__divider');
+
+    const icons = ['icons/social/facebook.svg', 'icons/social/telegramblack.png', 'icons/social/Github.svg']
+    const original_icons = ['icons/social/facebookwhite.svg', 'icons/social/telegramwhite.png', 'icons/social/githubwhite.svg']
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 500) {
+            sidepanel_text.style.color = "#000";
+            divider.style.backgroundColor = "#000";
+            sidepanel_icons.forEach((icon, i) => {
+                icon.setAttribute('src', icons[i]);
+            });
+
+        } else {
+            sidepanel_text.style.color = "#fff";
+            divider.style.backgroundColor = "#fff";
+            sidepanel_icons.forEach((icon, i) => {
+                icon.setAttribute('src', original_icons[i]);
+            });
+        }
+    });
+
     // skills
 
     const counters = document.querySelectorAll('.tools__percents-amount');
@@ -33,6 +60,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     counters.forEach((item, i) => {
         lines[i].style.width = item.innerHTML;
+    });
+
+
+    //pageup
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
     });
 
 
